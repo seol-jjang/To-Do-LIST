@@ -1,0 +1,140 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css";
+@import "common/font";
+
+* {
+    box-sizing: border-box;
+}
+
+.todo,
+.name-form,
+.greetings {
+    display: none;
+}
+
+.showing {
+    display: block;
+}
+
+body {
+    max-width: 600px;
+    margin: 50px auto 0;
+    font-family: 'DOSGothic';
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wrap {
+    width: 100%;
+    background-color: white;
+    padding: 0 30px;
+}
+
+header {
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'DOSMyungjo';
+    h2 {
+        font-size: 45px;
+    }
+    span {
+        font-size: 20px;
+    }
+}
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-info {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    .name-form input {
+        padding-bottom: 10px;
+        border: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+        outline: none;
+        font-family: 'DOSGothic';
+        font-size: 20px;
+        text-align: center;
+    }
+    .greetings {
+        font-size: 23px;
+    }
+}
+
+.todo {
+    .todo-form input {
+        width: 100%;
+        padding: 20px;
+        font-size: 20px;
+        font-family: 'DOSGothic';
+    }
+    .list {
+        margin-top: 50px;
+        .btn-util {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 30px;
+            button {
+                cursor: pointer;
+                padding: 5px 15px;
+                border: 1px solid black;
+                outline: none;
+                border-radius: 10px;
+                background-color: white;
+                font-family: 'DOSMyungjo';
+                font-size: 16px;
+                color: black;
+                &:first-child {
+                    margin-right: 10px;
+                }
+            }
+            .active {
+                background-color: black;
+                color: white;
+            }
+        }
+        ul {
+            display: none;
+            li {
+                margin-bottom: 10px;
+                display: grid;
+                grid-template-columns: 9fr 0.5fr 0.5fr;
+                gap: 10px;
+                align-items: center;
+                padding: 8px 10px;
+                border: 1px solid black;
+                button {
+                    cursor: pointer;
+                    background: transparent;
+                    border: none;
+                    outline: none;
+                }
+            }
+        }
+        .visible {
+            display: block;
+        }
+    }
+}
+
+.weather {
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+}
+
+.bgImg {
+    margin-top: 20px;
+    width: 100px;
+    height: 100px;
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}

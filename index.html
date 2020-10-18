@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="src/css/main.css">
+</head>
+<body>
+    <div class="wrap">
+        <header class="header">
+            <h2>To-Do</h2>
+            <div class="js-clock clock">
+                <span>00:00</span>
+            </div>
+        </header>
+        <main>
+            <section class="user-info">
+                <form class="js-name-form name-form">
+                    <input type="text" placeholder="What is your name">
+                </form>
+                <h4 class="js-greetings greetings"></h4>
+            </section>
+            <section class="todo">
+                <form class="js-toDoForm todo-form">
+                    <input type="text" placeholder="Write a to do">
+                </form>
+                <div class="list">
+                    <div class="btn-util">
+                        <button class="to-do-btn active">doing</button>
+                        <button class="complete-btn">complete</button>
+                    </div>
+                    <ul class="js-toDoList to-do visible"></ul>
+                    <ul class="js-completedList completed"></ul>
+                </div>
+            </section>
+            <section class="js-weather weather"></section>
+        </main>
+    </div>
+    <div class="bgImg"></div>
+    <script src="src/js/clock.js"></script>
+    <script src="src/js/greetings.js"></script>
+    <script src="src/js/todos.js"></script>
+    <script src="src/js/weather.js"></script>
+    <script src="src/js/listOpen.js"></script>
+    <script src="src/js/bg.js"></script>
+</body>
+</html>
